@@ -1,0 +1,17 @@
+#include<iostream>
+#include <pcl/point_types.h>
+#include <pcl/segmentation/min_cut_segmentation.h>
+#include <emscripten/bind.h>
+
+// define Segmentation
+#define BIND_SEGMENTATION(PointT)
+  class <pcl::Segmentation<PointT>>("Segmentation" #PointT)
+    .function("setForegroundPoints", &pcl::Segmentation<PointT>::setForegroundPoints)
+    .function("setBackgroundPoints", &pcl::Segmentation<PointT>::setBackgroundPoints)
+    .function("getForegroundPoints", &pcl::Segmentation<PointT>::getForegroundPoints)
+    .function("getBackgroundPoints", &pcl::Segmentation<PointT>::getBackgroundPoints)
+    .function("extract", &pcl::Segmentation<&PointT>::extract)
+
+// define setForegroundPoints
+
+// define setBack
