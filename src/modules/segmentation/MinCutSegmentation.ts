@@ -1,11 +1,11 @@
+import { PointCloud } from '@/modules/common/PointCloud';
 import {
-  PointCloud,
   PointXYZ,
   PointTypesIntersection,
   PointTypesUnion,
   TPointTypesUnion,
   Vector,
-} from '../point-types';
+} from '@/modules/common/point-types';
 
 class MinCutSegmentation<
   T extends Partial<PointTypesUnion> = Partial<PointTypesIntersection>,
